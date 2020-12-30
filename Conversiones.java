@@ -167,7 +167,7 @@ public class Conversiones {
         if(unidadOriginal.compareTo(pies)==0 && unidadDestino.compareTo(pulgadas)==0 ){
         resultado=cantidad*12;
         }
-        //=============================pulgadas de pulagadas==================00
+        //=============================pulgadas==================
         
         return resultado;
         }
