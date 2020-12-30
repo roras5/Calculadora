@@ -6,7 +6,7 @@ public class Conversiones {
     private double milimetros;
     
     //Metodos para conversión de metros a otras unidades 
-    
+    //las excepciones se simplifican gracias a la clase vista
    //========Metros===============
    public double metrosAcentimetros(double Cantidadmetros){
 
