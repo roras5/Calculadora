@@ -28,5 +28,23 @@ public class Conversiones {
    }
    
    //========Centimetros===============
+
+   public double centimetrosAmetros(double Cantidadcentimetros){
+     this.metros = Cantidadcentimetros * 100;
+     return metros;
+
+   }
+
+   public double centimetrosAkilometros(double Cantidadcentimetros){
+     this.kilometros = Cantidadcentimetros * 100000;
+     return kilometros;
+   }
+
+
+   public double centimetrosAmilimetros(double Cantidadcentimetros){
+     this.milimetros = Cantidadcentimetros /10;
+     return 0.2;
+
+   }
     
 }
