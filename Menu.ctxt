@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Menu
+comment1.params=ops
+comment1.target=Menu(java.lang.String[])
+comment2.params=ops\ t
+comment2.target=Menu(java.lang.String[],\ java.lang.String)
+comment3.params=
+comment3.target=Menu()
+comment4.params=
+comment4.target=int\ getOpcion()
+comment5.params=ops
+comment5.target=void\ setOpciones(java.lang.String[])
+comment6.params=t
+comment6.target=void\ setTitulo(java.lang.String)
+comment7.params=
+comment7.target=void\ muestraMenu()
+numComments=8
