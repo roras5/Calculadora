@@ -17,9 +17,16 @@ public class Main {
 
         //variable de opciones
         int op;
+        double cantidad;
+        double resultado;
+        
         //variable que regresa a el menu principal
         boolean regresar=false;
-       
+        //Clase conversiones
+        Conversiones conversion =new Conversiones();
+        //Clase calculadora vista
+        CalculadoraVista vista=new CalculadoraVista();
+        
         do{
         //calculadora ===============menu principal===================
         menuPrincipal.setTitulo("Bienbenido a la calculadora de conversiones");
@@ -37,6 +44,9 @@ public class Main {
                 switch (op) {
 
                     case 1://metros a cm
+                        cantidad=vista.solicitaCantidad();
+                        resultado = conversion.metrosAcentimetros(cantidad);
+                        System.out.println("resultado = " + resultado);
                         break;
                     case 2://metros a km
                         break;
