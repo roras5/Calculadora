@@ -1,33 +1,22 @@
-
-/**
- * Write a description of class CalculadoraVista here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.util.*;
 public class CalculadoraVista
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class CalculadoraVista
-     */
-    public CalculadoraVista()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    Scanner entrada = new Scanner(System.in);
+    
+     public double solicitaCantidad(){
+        int val = 0;
+        boolean otraVez = false;
+        do{
+            try{
+                System.out.println("Ingrese la cantidad deceada a convertir: ");
+                entrada = new Scanner(System.in);
+                val = entrada.nextInt();
+                otraVez = false;
+            } catch(InputMismatchException e){
+                System.out.println("Debes proporcionar un double");
+                otraVez = true;
+            }
+        }while(otraVez);
+        return val;
+    }    
 }
