@@ -46,11 +46,20 @@ public class Main {
                     case 1://metros a cm
                         cantidad=vista.solicitaCantidad();
                         resultado = conversion.metrosAcentimetros(cantidad);
-                        System.out.println("resultado = " + resultado);
+                        System.out.println("resultado de la conversion = " + resultado);
+                        regresar=true;
                         break;
                     case 2://metros a km
+                        cantidad=vista.solicitaCantidad();
+                        resultado = conversion.metrosAkilometros(cantidad);
+                        System.out.println("resultado de la conversion= " + resultado);
+                        regresar=true;
                         break;
                     case 3://metros a mm
+                        cantidad=vista.solicitaCantidad();
+                        resultado = conversion.metrosAmilimetros(cantidad);
+                        System.out.println("resultado de la conversion = " + resultado);
+                        regresar=true;
                         break;
                     case 4://regresar
                         regresar=true;
