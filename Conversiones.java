@@ -1,3 +1,5 @@
+import jdk.javadoc.internal.doclets.toolkit.resources.doclets;
+
 public class Conversiones {
     
     private double metros;
@@ -46,5 +48,43 @@ public class Conversiones {
      return 0.2;
 
    }
-    
+
+   //========kilometros===============
+
+   public double kilometrosAmetros(double Cantidadkilometros){
+
+     this.kilometros = Cantidadkilometros *1000;
+     return kilometros;
+   }
+
+   public double kilometrosAcentrimetros(double Cantidadkilometros){
+     this.kilometros = Cantidadkilometros * 100000;
+     return kilometros;   
+   }
+
+   public double kilometrosAmilimetros(double Cantidadkilometros){
+     this.kilometros = Cantidadkilometros / 0.0000010000;
+     return kilometros;
+   }
+
+     //========Milimetros===============
+
+     public double milimetrosAmetros(double Cantidadmilimetros){
+          this.milimetros = Cantidadmilimetros/1000;
+
+          return milimetros;
+     }
+
+     public double milimetrosAcentimetros(double Cantidadmilimetros){
+          this.milimetros = Cantidadmilimetros * 10;
+          return milimetros;
+     }
+
+     public double milimetrosAkilometros(double Cantidadmilimetros){
+
+          this.milimetros = Cantidadmilimetros/1000000;
+          return milimetros;
+     }
+
+
 }
