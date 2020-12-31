@@ -168,7 +168,30 @@ public class Conversiones {
         resultado=cantidad*12;
         }
         //=============================pulgadas==================
-        
+         //pulgadas a m
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(metros)==0 ){
+        resultado=cantidad/39.37;
+        }
+        //pulgadas a cm
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(centimetros)==0 ){
+        resultado=cantidad*2.54;
+        }
+        //pulgadas a mm
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(milimetros)==0){
+        resultado=cantidad*25.4;
+        }
+        //pulgadas a km
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(kilometros)==0 ){
+        resultado=cantidad/39370;
+        }
+        //pulgados a milla
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(millas)==0 ){
+        resultado=cantidad/63360;
+        }
+        //pulgadas a pies
+        if(unidadOriginal.compareTo(pulgadas)==0 && unidadDestino.compareTo(pies)==0 ){
+        resultado=cantidad/12;
+        }
         return resultado;
         }
         
