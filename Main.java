@@ -19,10 +19,12 @@ public class Main {
         System.out.println("Elige la unidad de destino: ");
         int unidadDestino = m.getOpcion();
         
+        String prefijo =opcionesMenu[unidadDestino-1];
+       
         double cantidad=vista.solicitaCantidad();
         
         // hacemos la conversion
-        convertir.conversion(cantidad, unidadOrigen, unidadDestino);
+        convertir.conversion(cantidad, unidadOrigen, unidadDestino, prefijo);
         
         continua=vista.Continuar();
         
