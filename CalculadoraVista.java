@@ -11,7 +11,7 @@ public class CalculadoraVista {
         boolean otraVez = false;
         do {
             try {
-                System.out.println("Ingrese una cantidad");
+                System.out.println("Ingrese una cantidad: ");
                 entrada = new Scanner(System.in);
                 val = entrada.nextInt();
                 otraVez = false;
@@ -36,7 +36,7 @@ public class CalculadoraVista {
                 System.out.println("\"pies\"");
                 System.out.println("\"pulgadas\"");
 
-                System.out.println("Escriba la unidad");
+                
                 entrada = new Scanner(System.in);
                 unidad = entrada.nextLine();
                 if (unidad.compareTo("metros") == 0 || unidad.compareTo("milimetros") == 0 || unidad.compareTo("kilometros") == 0 || unidad.compareTo("millas") == 0 || unidad.compareTo("pies") == 0 || unidad.compareTo("pulgadas") == 0) {
