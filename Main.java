@@ -1,25 +1,32 @@
-
 public class Main {
 
     public static void main(String[] args) {
-        CalculadoraVista vista = new CalculadoraVista();
-        Conversiones conversion = new Conversiones();
-        boolean sigue = false;
-
-        do {
-            //pedimos datos
-            System.out.println("=====Bienvenido a el conversor de unidades UAEMEX============");
-            System.out.println("Escriba una unidad de origen: ");
-            String unidadOrigen = vista.solicitaUnidad();
-            System.out.println("Escriba una unidad de destino: ");
-            String unidadDestino = vista.solicitaUnidad();
-            double cantidado = vista.solicitaCantidad();
-            //Ejecutamos conversion
-            double resultado = conversion.conversion(cantidado, unidadOrigen, unidadDestino);
-            System.out.println("resultado de la conversion = " + resultado +" "+unidadDestino);
-            sigue = vista.Continuar();
-        } while (sigue);
-
+        //menu
+        String[] opcionesMenu = {"metros", "centimetros", "milimetros", "kilometros", "millas", "pies", "pulgadas"};
+        //clases
+        Menu m = new Menu(opcionesMenu);
+        Vista vista=new Vista();
+        Conversor convertir =new Conversor();
+        //bandera
+        boolean continua=false;
+        
+        do{
+        m.setTitulo("Convertidor de unidades metricas");
+        m.muestraMenu();
+        System.out.println("Elige la unidad de origen: ");
+        int unidadOrigen = m.getOpcion();
+        
+        System.out.println("Elige la unidad de destino: ");
+        int unidadDestino = m.getOpcion();
+        
+        double cantidad=vista.solicitaCantidad();
+        
+        // hacemos la conversion
+        convertir.conversion(cantidad, unidadOrigen, unidadDestino);
+        
+        continua=vista.Continuar();
+        
+        }while(continua);
     }
 
 }
