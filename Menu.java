@@ -24,7 +24,7 @@ public class Menu {
         do{
             try{
                 entrada = new Scanner(System.in);
-                System.out.println("Selecciona una opcion: ");
+               
                 val = entrada.nextInt();
                 if(val < 1 || val > opciones.length){
                     System.out.println("Opcion incorrecta, las opciones van de 1 a "+opciones.length);
