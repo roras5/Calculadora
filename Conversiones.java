@@ -13,9 +13,10 @@ public class Conversiones {
     private String pulgadas="pulgadas";
     
     public double conversion(double cantidad,String unidadOriginal,String unidadDestino){
-       double resultado=1;
+       double resultado=0;
        if(unidadOriginal.compareTo(unidadDestino)==0){
-           System.out.println("No se puede convertir a la misma unidad");
+           System.out.println("Elijio la mismo unidad");
+           resultado=cantidad;
        }
         //=================metros===========================================================
         //metros a centimetros
