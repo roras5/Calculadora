@@ -43,6 +43,7 @@ public class CalculadoraVista {
                     otraVez = false;
                 } else {
                     otraVez = true;
+                    System.out.println("Esa respuesta no es valida");
                 }
 
             } catch (InputMismatchException e) {
