@@ -1,36 +1,42 @@
 public class Main {
 
     public static void main(String[] args) {
-        //menu
-        String[] opcionesMenu = {"metros", "centimetros", "milimetros", "kilometros", "millas", "pies", "pulgadas"};
-        //clases
-        Menu m = new Menu(opcionesMenu);
-        Vista vista=new Vista();
-        Conversor convertir =new Conversor();
-        //bandera
-        boolean continua=false;
+        String[] opcionesUnidades = {"metros", "centimetros", "milimetros", "kilometros", "millas", "pies", "pulgadas"};
+        int unidadOriginal, unidadDestino;
+        String unidad;
+        double longitud, longitud_dless, resultado;
+        boolean continuar = false;
+        
+        // Creaci&oacute;n de objetos
+        Menu menuUnidades = new Menu(opcionesUnidades);
+        Vista vista = new Vista();
+        Conversor convertLongitud = new Conversor();        
+        
+        // Asignaci&oacute;n de t&iacute;tulo al men&uacute; de Unidades
+        menuUnidades.setTitulo("Conversor de longitudes");
 
-        //Revisar
-        
         do{
-        m.setTitulo("Convertidor de unidades metricas");
-        m.muestraMenu();
-        System.out.println("Elige la unidad de origen: ");
-        int unidadOrigen = m.getOpcion();
-        
-        System.out.println("Elige la unidad de destino: ");
-        int unidadDestino = m.getOpcion();
-        
-        String prefijo =opcionesMenu[unidadDestino-1];
-       
-        double cantidad=vista.solicitaCantidad();
-        
-        // hacemos la conversion
-        convertir.conversion(cantidad, unidadOrigen, unidadDestino, prefijo);
-        
-        continua=vista.Continuar();
-        
-        }while(continua);
+            // --- Solicitud de longitud a convertir: ------------------------------------------
+            menuUnidades.muestraMenu();
+            System.out.println("Seleccione la unidad inicial:");
+            unidadOriginal = menuUnidades.getOpcion();
+
+            System.out.println("Elige la unidad de destino:");
+            unidadDestino = menuUnidades.getOpcion();
+            
+            unidad = opcionesUnidades[unidadDestino - 1];
+
+            longitud = vista.solicitaCantidad();
+            
+            // --- Coversi&oacute;n de longitud: ------------------------------------------------
+            longitud_dless = convertLongitud.dimensionless(longitud, unidadOriginal);
+            resultado = convertLongitud.conversion(longitud_dless, unidadDestino);
+
+            // --- Imprimir resultado en pantalla: ----------------------------------------------
+            vista.printResultado(resultado, unidad);
+            //
+            continuar = vista.Continuar();
+        }while(continuar);
     }
 
 }
