@@ -40,7 +40,6 @@ public class Menu {
         return val;
     }
     
-    
     public void setOpciones(String[] ops){
         opciones = ops;
     }
