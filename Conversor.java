@@ -1,3 +1,13 @@
+/* 
+    Equipo 1 
+        Sanchez Mendieta Jesus Alberto #0912365
+        Flores Garcia Samuel  #2020967
+        Colin Aguilar Jose Manuel  #2020960
+        Vega Meza Ramiro  #2021022
+        Romero Rios Jose Angel #2021011
+
+*/
+
 
 public class Conversor {
 //REVISADO
